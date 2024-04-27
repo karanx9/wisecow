@@ -12,6 +12,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build Docker Image
       run: |
-        docker build -t ghcr.io/your-github-username/wisecow:latest.
+        docker build -t ghcr.io/your-github-username/wisecow:latest .
         echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u $ --password-stdin
         docker push ghcr.io/your-github-username/wisecow:latest
